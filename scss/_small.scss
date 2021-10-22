@@ -1,0 +1,22 @@
+@media (min-width: 375px) {
+	.header {
+		&__title {
+			font-size: 5rem;
+		}
+
+		&__text {
+			font-size: 2rem;
+		}
+	}
+}
+
+@media (min-width: 568px) {
+	.header {
+		&__text-box {
+			padding: 0 2.6em;
+		}
+	}
+}
+
+@media (max-height: 420px) {
+}

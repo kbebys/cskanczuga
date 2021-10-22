@@ -1,0 +1,136 @@
+@media (min-width: 992px) {
+	.hamburger {
+		display: none;
+	}
+
+	.nav {
+		&__mobile {
+			display: none;
+		}
+
+		&__desktop {
+			display: block;
+			position: fixed;
+			width: 100%;
+			height: 80px;
+			background-color: $light-darker;
+			z-index: 100;
+		}
+
+		&__desktop-box {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 80px;
+		}
+
+		&__link-item {
+			position: relative;
+			margin: 0.5em;
+			padding: 0.4em 0.8em;
+			font-size: 2rem;
+
+			&::before {
+				@include before-after;
+				border: 1px solid $primary;
+				opacity: 0;
+			}
+
+			&:hover::before {
+				animation: pulse 1s;
+			}
+		}
+	}
+
+	.header {
+		grid-template-columns: 0.8fr 1.2fr;
+		grid-template-rows: 80px 1fr 1fr;
+
+		&__text-box {
+			grid-column: 1/2;
+			grid-row: 2/4;
+			justify-content: flex-start;
+			align-items: flex-start;
+			padding: 10vh 1em 0 2em;
+			text-align: left;
+		}
+
+		&__title {
+			margin-bottom: 0.5em;
+		}
+
+		&__text {
+			font-size: 3rem;
+		}
+
+		&__img {
+			grid-column: 2/3;
+			grid-row: 2/4;
+			position: relative;
+			background-position: 55% 20%;
+		}
+
+		&__shadow {
+			left: -1px;
+			right: 0;
+			height: 100%;
+			width: auto;
+			background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.2) 65%, rgba(241, 241, 241, 1) 99%);
+		}
+
+		&__icon-box {
+			width: 50%;
+			height: 100%;
+		}
+
+		&__icon-one {
+			top: 8em;
+			left: 60%;
+			width: 20%;
+		}
+
+		&__icon-two {
+			bottom: -2em;
+			right: 70%;
+		}
+
+		&__arrow {
+			display: block;
+			position: absolute;
+			left: 40%;
+			bottom: 4em;
+			transform: translateX(-50%);
+			padding: 2em;
+			border: 1px solid $primary;
+			border-radius: 50%;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: -1px;
+				left: -1px;
+				width: 100%;
+				height: 100%;
+				border: 1px solid $primary;
+				border-radius: 50%;
+				animation: pulse 1s infinite;
+			}
+		}
+
+		&__arrow-img {
+			width: 50px;
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.header {
+		&__title {
+			font-size: 10rem;
+		}
+
+		&__text {
+			font-size: 3.4rem;
+		}
+	}
+}
