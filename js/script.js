@@ -7,6 +7,7 @@ function navLinksHandler() {
 	navMenu.classList.remove('nav__active')
 	navBtn.setAttribute('aria-expanded', 'false')
 	navLinksAnimationHandler()
+	enableScroll()
 }
 
 function navLinksAnimationHandler() {
@@ -30,10 +31,20 @@ function navHandler() {
 			elemen.addEventListener('click', navLinksHandler)
 		})
 
+		disableScroll()
 		navBtn.setAttribute('aria-expanded', 'true')
 	} else {
+		enableScroll()
 		navBtn.setAttribute('aria-expanded', 'false')
 	}
+}
+
+function disableScroll() {
+	document.body.classList.add('stop-scrolling')
+}
+
+function enableScroll() {
+	document.body.classList.remove('stop-scrolling')
 }
 
 navBtn.addEventListener('click', navHandler)

@@ -34,6 +34,11 @@ body {
 	max-width: 1200px;
 }
 
+.stop-scrolling {
+	height: 100%;
+	overflow: hidden;
+}
+
 .hamburger {
 	position: fixed;
 	top: 1.8rem;
@@ -65,7 +70,7 @@ body {
 		grid-template-columns: 1fr;
 		grid-template-rows: 100px 1fr;
 		background-color: $light;
-		transition: transform 0.5s cubic-bezier(0.28, 0.74, 0.31, 1.08);
+		transition: transform 0.5s cubic-bezier(0.28, 0.74, 0.31, 1);
 		z-index: 500;
 	}
 
