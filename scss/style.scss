@@ -39,6 +39,29 @@ body {
 	overflow: hidden;
 }
 
+.section-title {
+	position: relative;
+	margin: 0 auto 3em;
+	width: fit-content;
+	font-size: 2.6rem;
+	font-weight: 300;
+	text-transform: uppercase;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		height: 3px;
+		width: 3em;
+		background-color: $primary;
+	}
+
+	&-span {
+		font-weight: bold;
+	}
+}
+
 .hamburger {
 	position: fixed;
 	top: 1.8rem;
@@ -201,16 +224,142 @@ body {
 
 	&__icon-two {
 		position: absolute;
-		bottom: -4em;
+		bottom: 0;
 		right: -5em;
 		width: 50%;
 		animation: rotate-right 120s infinite linear;
 	}
 }
 
+.services {
+	padding-top: 3em;
+	background-color: $light-darker;
+
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2.5em;
+		padding: 0 1em 3em;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		padding: 1em;
+		background-color: $light;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+	}
+
+	&__img {
+		width: 100%;
+		max-height: 400px;
+		object-fit: cover;
+	}
+
+	&__title {
+		margin-bottom: 0.6em;
+		font-weight: bold;
+	}
+
+	&__text {
+		margin-bottom: 0.4em;
+	}
+
+	&__link {
+		align-self: flex-end;
+		font-weight: bold;
+		color: $primary;
+		text-decoration: underline;
+	}
+
+	&__rtg {
+		padding-bottom: 1em;
+		background-color: $dark;
+
+		&-wrapper {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 1em;
+		}
+
+		&-box {
+			padding: 2em 1em;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			color: $light;
+		}
+
+		&-title {
+			margin-bottom: 1em;
+			text-transform: uppercase;
+		}
+
+		&-btn {
+			position: relative;
+			margin-top: 1em;
+			padding: 0.5em 1em;
+			background-color: $light-darker;
+			color: $darker;
+			font-weight: bold;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: $light;
+			}
+
+			&::before {
+				@include before-after;
+				top: -1px;
+				left: -1px;
+				border: 1px solid $light;
+				opacity: 0;
+			}
+
+			&:hover::before {
+				animation: pulse 1s;
+			}
+		}
+
+		&-img {
+			width: 100%;
+			max-height: 400px;
+		}
+	}
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+
+	&__img {
+		width: 100%;
+		max-height: 200px;
+		object-fit: cover;
+		object-position: center;
+
+		&:nth-child(even) {
+			display: none;
+		}
+	}
+}
+
+.footer {
+	padding: 2em 0;
+	background-color: $dark;
+	font-size: 2rem;
+	text-align: center;
+	color: $light;
+}
+
 .helper {
 	height: 100vh;
 	background-color: $light-darker;
+	color: $light;
 }
 
 @import './small';

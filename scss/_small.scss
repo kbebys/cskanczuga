@@ -16,7 +16,19 @@
 			padding: 0 2.6em;
 		}
 	}
-}
 
-@media (max-height: 420px) {
+	.services {
+		&__items {
+			grid-template-columns: 1fr 4fr;
+			gap: 3em;
+		}
+
+		&__item {
+			grid-column: 2/3;
+		}
+
+		&__img {
+			grid-column: 1/3;
+		}
+	}
 }
