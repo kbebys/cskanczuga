@@ -3,6 +3,10 @@
 		display: none;
 	}
 
+	.section-title {
+		font-size: 3rem;
+	}
+
 	.nav {
 		&__mobile {
 			display: none;
@@ -19,7 +23,7 @@
 
 		&__desktop-box {
 			display: flex;
-			justify-content: space-between;
+			justify-content: flex-end;
 			align-items: center;
 			height: 80px;
 		}
@@ -33,6 +37,7 @@
 			&::before {
 				@include before-after;
 				border: 1px solid $primary;
+				border-radius: 4px;
 				opacity: 0;
 			}
 
@@ -50,9 +55,7 @@
 			grid-column: 1/2;
 			grid-row: 2/4;
 			justify-content: flex-start;
-			align-items: flex-start;
 			padding: 10vh 1em 0 2em;
-			text-align: left;
 		}
 
 		&__title {
@@ -122,6 +125,8 @@
 	}
 
 	.services {
+		scroll-margin-top: 80px;
+
 		&__items {
 			grid-template-columns: 1fr 1fr;
 		}
@@ -165,13 +170,31 @@
 	}
 
 	.gallery {
-		grid-template-columns: repeat(4, 1fr);
+		margin: 5em 0;
 
-		&__img {
-			max-height: 300px;
-			&:nth-child(even) {
-				display: inline-block;
-			}
+		&-wrapper {
+			position: relative;
+		}
+		&__next,
+		&__prev {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			padding: 0.1em 0.2em;
+			border: none;
+			background: none;
+			font-size: 5rem;
+			color: $darker;
+			cursor: pointer;
+			z-index: 10;
+		}
+
+		&__next {
+			right: 0.5em;
+		}
+
+		&__prev {
+			left: 0.5em;
 		}
 	}
 }
@@ -184,6 +207,18 @@
 
 		&__text {
 			font-size: 3.4rem;
+		}
+	}
+}
+
+@media (min-width: 1500px) {
+	.gallery {
+		&__next {
+			right: -1em;
+		}
+
+		&__prev {
+			left: -1em;
 		}
 	}
 }
