@@ -17,6 +17,7 @@
 			position: fixed;
 			width: 100%;
 			height: 80px;
+			border-bottom: 1px solid #c7c4c4;
 			background-color: $light-darker;
 			z-index: 100;
 		}
@@ -35,7 +36,12 @@
 			font-size: 2rem;
 
 			&::before {
-				@include before-after;
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
 				border: 1px solid $primary;
 				border-radius: 4px;
 				opacity: 0;
@@ -48,22 +54,26 @@
 	}
 
 	.header {
-		grid-template-columns: 0.8fr 1.2fr;
+		grid-template-columns: 1fr 3fr;
 		grid-template-rows: 80px 1fr 1fr;
 
 		&__text-box {
 			grid-column: 1/2;
 			grid-row: 2/4;
 			justify-content: flex-start;
-			padding: 10vh 1em 0 2em;
+			padding: 15vh 2em;
 		}
 
 		&__title {
-			margin-bottom: 0.5em;
+			font-size: 6rem;
 		}
 
 		&__text {
-			font-size: 3rem;
+			font-size: 2.2rem;
+		}
+
+		&__btn {
+			margin: 3em 0;
 		}
 
 		&__img {
@@ -81,47 +91,31 @@
 			background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.2) 65%, rgba(241, 241, 241, 1) 99%);
 		}
 
-		&__icon-box {
-			width: 50%;
-			height: 100%;
-		}
+		// &__icon-box {
+		// 	width: 50%;
+		// 	height: 100%;
+		// }
 
-		&__icon-one {
-			top: 8em;
-			left: 60%;
-			width: 20%;
-		}
+		// &__icon-one {
+		// 	top: 8em;
+		// 	left: 60%;
+		// 	width: 20%;
+		// }
 
-		&__icon-two {
-			right: 70%;
-		}
+		// &__icon-two {
+		// 	right: 70%;
+		// }
 
-		&__arrow {
-			display: block;
-			position: absolute;
-			left: 40%;
-			bottom: 4em;
-			transform: translateX(-50%);
-			padding: 2em;
-			border: 1px solid $primary;
-			border-radius: 50%;
-
-			&::before {
-				content: '';
-				position: absolute;
-				top: -1px;
-				left: -1px;
-				width: 100%;
-				height: 100%;
-				border: 1px solid $primary;
-				border-radius: 50%;
-				animation: pulse 1s infinite;
-			}
-		}
-
-		&__arrow-img {
-			width: 50px;
-		}
+		// &__arrow {
+		// 	display: block;
+		// 	position: absolute;
+		// 	left: 50%;
+		// 	bottom: 4em;
+		// 	transform: translateX(-50%);
+		// 	width: 80px;
+		// 	height: 80px;
+		// 	z-index: 5;
+		// }
 	}
 
 	.services {
@@ -221,16 +215,26 @@
 			left: 0.5em;
 		}
 	}
+
+	.contact {
+		scroll-margin-top: 80px;
+	}
 }
 
 @media (min-width: 1400px) {
 	.header {
+		grid-template-columns: 1fr 2fr;
+
+		&__text-box {
+			padding: 20vh 2em;
+		}
+
 		&__title {
-			font-size: 10rem;
+			font-size: 8rem;
 		}
 
 		&__text {
-			font-size: 3.4rem;
+			font-size: 2.8rem;
 		}
 	}
 }

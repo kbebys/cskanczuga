@@ -21,6 +21,10 @@
 		&__text {
 			font-size: 2.6rem;
 		}
+
+		&__btn {
+			font-size: 2rem;
+		}
 	}
 
 	.services {
@@ -102,6 +106,14 @@
 
 		&__text {
 			font-size: 2rem;
+		}
+	}
+}
+
+@media (max-width: 992px) and (orientation: landscape) {
+	.header {
+		&__btn {
+			display: none;
 		}
 	}
 }
