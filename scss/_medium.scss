@@ -27,6 +27,17 @@
 		}
 	}
 
+	.header-xray {
+		padding: 0 4em;
+		&__title {
+			font-size: 6rem;
+		}
+
+		&__text {
+			font-size: 2rem;
+		}
+	}
+
 	.services {
 		&__items {
 			grid-template-columns: 2fr 3fr;
@@ -58,11 +69,18 @@
 		}
 	}
 
+	.xray-lab {
+		padding: 5em 3em 4em;
+
+		&__wrapper {
+			grid-template-columns: 1fr 3fr 1fr;
+		}
+	}
+
 	.contact {
 		&__boxes {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			// grid-template-rows: 1fr 1fr;
 		}
 
 		&__box {

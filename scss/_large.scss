@@ -15,6 +15,8 @@
 		&__desktop {
 			display: block;
 			position: fixed;
+			top: 0;
+			left: 0;
 			width: 100%;
 			height: 80px;
 			border-bottom: 1px solid #c7c4c4;
@@ -90,32 +92,59 @@
 			width: auto;
 			background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.2) 65%, rgba(241, 241, 241, 1) 99%);
 		}
+	}
 
-		// &__icon-box {
-		// 	width: 50%;
-		// 	height: 100%;
-		// }
+	.header-xray {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 80px 1fr;
+		padding: 0;
+		background-image: none;
+		overflow: hidden;
 
-		// &__icon-one {
-		// 	top: 8em;
-		// 	left: 60%;
-		// 	width: 20%;
-		// }
+		&__wrapper {
+			grid-column: 1/2;
+			grid-row: 2/3;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 30px 1fr 1fr;
+			column-gap: 3em;
+			padding: 0 3em 1em;
+			max-height: calc(60vh - 80px);
+		}
 
-		// &__icon-two {
-		// 	right: 70%;
-		// }
+		&__title {
+			grid-column: 1/2;
+			grid-row: 2/3;
+			align-self: end;
+			margin-bottom: 1em;
+		}
 
-		// &__arrow {
-		// 	display: block;
-		// 	position: absolute;
-		// 	left: 50%;
-		// 	bottom: 4em;
-		// 	transform: translateX(-50%);
-		// 	width: 80px;
-		// 	height: 80px;
-		// 	z-index: 5;
-		// }
+		&__text {
+			grid-column: 1/2;
+			grid-row: 3/4;
+			align-self: center;
+			padding-top: 2em;
+			color: $dark;
+		}
+
+		&__img {
+			grid-column: 2/3;
+			grid-row: 2/4;
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 4px;
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+			object-fit: cover;
+			object-position: center 20%;
+			overflow: hidden;
+		}
+
+		&__shadow {
+			background-color: $dark;
+			height: 60%;
+		}
 	}
 
 	.services {
@@ -216,6 +245,20 @@
 		}
 	}
 
+	.xray-lab {
+		margin-top: 6em;
+		padding: 6em 4em 5em;
+
+		&__wrapper {
+			grid-template-columns: 1fr 1fr 1fr;
+			row-gap: 3em;
+		}
+
+		&__text-box {
+			font-size: 2rem;
+		}
+	}
+
 	.contact {
 		scroll-margin-top: 80px;
 	}
@@ -235,6 +278,24 @@
 
 		&__text {
 			font-size: 2.8rem;
+		}
+	}
+
+	.header-xray {
+		&__title {
+			font-size: 8rem;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+		}
+	}
+
+	.xray-lab {
+		padding: 6em 4em 6em;
+
+		&__wrapper {
+			grid-template-columns: 1fr 2fr 2fr;
 		}
 	}
 }

@@ -12,12 +12,12 @@ function navLinksHandler() {
 }
 
 function navLinksAnimationHandler() {
-	let animationDelay = 0
+	let animationDelay = 0.1
 
 	navLinks.forEach(element => {
 		element.classList.toggle('nav__links-animation')
-		element.style.animationDelay = '.' + animationDelay + 's'
-		animationDelay++
+		element.style.animationDelay = animationDelay + 's'
+		animationDelay += 0.05
 	})
 }
 
