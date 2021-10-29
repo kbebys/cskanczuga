@@ -325,7 +325,7 @@ body {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 65%, #f1f1f1 98%);
 }
 
-.header-xray {
+.header-subpage {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -339,18 +339,26 @@ body {
   padding: 0 2em;
   height: 60vh;
   text-align: center;
-  background-image: url("../img/xray/aparat-rtg.jpg");
   background-size: cover;
-  background-position: center 20%;
   color: #f1f1f1;
   font-weight: normal;
 }
 
-.header-xray__wrapper {
+.header-subpage--xray {
+  background-image: url("../img/xray/aparat-rtg.jpg");
+  background-position: center 20%;
+}
+
+.header-subpage--aboutus {
+  background-image: url("../img/aboutus/header.jpg");
+  background-position: 55% 20%;
+}
+
+.header-subpage__wrapper {
   z-index: 1;
 }
 
-.header-xray__title {
+.header-subpage__title {
   margin-bottom: 0.2em;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: 600;
@@ -358,11 +366,11 @@ body {
   text-transform: uppercase;
 }
 
-.header-xray__img {
+.header-subpage__img {
   display: none;
 }
 
-.header-xray__shadow {
+.header-subpage__shadow {
   position: absolute;
   top: 0;
   left: 0;
@@ -557,6 +565,45 @@ body {
 
 .gallery__next, .gallery__prev {
   display: none;
+}
+
+.aboutus {
+  padding: 4em 1em 2em;
+  background-color: #5e5e5e;
+  color: #f1f1f1;
+}
+
+.aboutus__cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 3em;
+}
+
+.aboutus__card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+.aboutus__name {
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.aboutus__img {
+  width: 100%;
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .xray-lab {
@@ -758,13 +805,13 @@ body {
   .header__btn {
     padding: 0.5em 2em;
   }
-  .header-xray {
+  .header-subpage {
     padding: 0 3em;
   }
-  .header-xray__title {
+  .header-subpage__title {
     font-size: 5rem;
   }
-  .header-xray__text {
+  .header-subpage__text {
     font-size: 1.8rem;
   }
   .services__items {
@@ -799,6 +846,15 @@ body {
   .gallery__box {
     margin: 0 0.5em;
     height: 300px;
+  }
+  .aboutus {
+    padding: 4em 2em 3em;
+  }
+  .aboutus__name {
+    font-size: 2.4rem;
+  }
+  .aboutus__text {
+    font-size: 1.8rem;
   }
   .xray-lab {
     padding: 4em 2em 3em;
@@ -863,13 +919,13 @@ body {
   .header__btn {
     font-size: 2rem;
   }
-  .header-xray {
+  .header-subpage {
     padding: 0 4em;
   }
-  .header-xray__title {
+  .header-subpage__title {
     font-size: 6rem;
   }
-  .header-xray__text {
+  .header-subpage__text {
     font-size: 2rem;
   }
   .services__items {
@@ -897,6 +953,12 @@ body {
   .gallery__box {
     margin: 0 1em;
     height: 400px;
+  }
+  .aboutus {
+    padding: 5em 3em 4em;
+  }
+  .aboutus__cards {
+    gap: 4em;
   }
   .xray-lab {
     padding: 5em 3em 4em;
@@ -1057,7 +1119,7 @@ body {
     background-image: -webkit-gradient(linear, right top, left top, color-stop(65%, rgba(0, 0, 0, 0.2)), color-stop(99%, #f1f1f1));
     background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.2) 65%, #f1f1f1 99%);
   }
-  .header-xray {
+  .header-subpage {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
@@ -1068,7 +1130,7 @@ body {
     background-image: none;
     overflow: hidden;
   }
-  .header-xray__wrapper {
+  .header-subpage__wrapper {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
@@ -1086,7 +1148,7 @@ body {
     padding: 0 3em 1em;
     max-height: calc(60vh - 80px);
   }
-  .header-xray__title {
+  .header-subpage__title {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
@@ -1098,7 +1160,10 @@ body {
         align-self: end;
     margin-bottom: 1em;
   }
-  .header-xray__text {
+  .header-subpage__title--aboutus {
+    color: #4b4b4b;
+  }
+  .header-subpage__text {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
@@ -1111,7 +1176,7 @@ body {
     padding-top: 2em;
     color: #5e5e5e;
   }
-  .header-xray__img {
+  .header-subpage__img {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/3;
@@ -1130,11 +1195,18 @@ body {
        object-position: center 20%;
     overflow: hidden;
   }
-  .header-xray__shadow {
-    background-color: #5e5e5e;
+  .header-subpage__shadow {
     height: 60%;
   }
+  .header-subpage__shadow--xray {
+    background-color: #5e5e5e;
+  }
+  .header-subpage__shadow--aboutus {
+    background-color: #e9e6e6;
+  }
   .services {
+    margin-top: 0;
+    padding-top: 6em;
     scroll-margin-top: 80px;
   }
   .services__items {
@@ -1239,6 +1311,38 @@ body {
   .gallery__prev {
     left: 0.5em;
   }
+  .aboutus {
+    margin-top: 6em;
+    padding: 6em 3em 5em;
+  }
+  .aboutus__cards {
+    gap: 4em;
+  }
+  .aboutus__card {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2em;
+  }
+  .aboutus__text-box--even {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .aboutus__img--even {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
   .xray-lab {
     margin-top: 6em;
     padding: 6em 4em 5em;
@@ -1270,10 +1374,10 @@ body {
   .header__text {
     font-size: 2.8rem;
   }
-  .header-xray__title {
+  .header-subpage__title {
     font-size: 8rem;
   }
-  .header-xray__text {
+  .header-subpage__text {
     font-size: 2.2rem;
   }
   .xray-lab {
@@ -1282,6 +1386,18 @@ body {
   .xray-lab__wrapper {
     -ms-grid-columns: 1fr 2fr 2fr;
         grid-template-columns: 1fr 2fr 2fr;
+  }
+  .aboutus__cards {
+    gap: 5em;
+  }
+  .aboutus__card {
+    gap: 3em;
+  }
+  .aboutus__name {
+    font-size: 2.6rem;
+  }
+  .aboutus__text {
+    font-size: 2rem;
   }
 }
 

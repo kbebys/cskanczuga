@@ -27,7 +27,7 @@
 		}
 	}
 
-	.header-xray {
+	.header-subpage {
 		padding: 0 4em;
 		&__title {
 			font-size: 6rem;
@@ -66,6 +66,14 @@
 		&__box {
 			margin: 0 1em;
 			height: 400px;
+		}
+	}
+
+	.aboutus {
+		padding: 5em 3em 4em;
+
+		&__cards {
+			gap: 4em;
 		}
 	}
 

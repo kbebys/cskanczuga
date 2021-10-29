@@ -224,7 +224,7 @@ body {
 	}
 }
 
-.header-xray {
+.header-subpage {
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -232,11 +232,19 @@ body {
 	padding: 0 2em;
 	height: 60vh;
 	text-align: center;
-	background-image: url('../img/xray/aparat-rtg.jpg');
 	background-size: cover;
-	background-position: center 20%;
 	color: $light;
 	font-weight: normal;
+
+	&--xray {
+		background-image: url('../img/xray/aparat-rtg.jpg');
+		background-position: center 20%;
+	}
+
+	&--aboutus {
+		background-image: url('../img/aboutus/header.jpg');
+		background-position: 55% 20%;
+	}
 
 	&__wrapper {
 		z-index: 1;
@@ -422,9 +430,42 @@ body {
 	}
 }
 
+.aboutus {
+	padding: 4em 1em 2em;
+	background-color: $dark;
+	color: $light;
+
+	&__cards {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 3em;
+	}
+
+	&__card {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1em;
+	}
+
+	&__name {
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__img {
+		width: 100%;
+		border-radius: 4px;
+		object-fit: cover;
+		object-position: center;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+	}
+}
+
 .xray-lab {
 	padding: 4em 1em 2em;
 	background-color: $light-darker;
+
 	&__wrapper {
 		display: grid;
 		grid-template-columns: 1fr;

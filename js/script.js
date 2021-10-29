@@ -50,7 +50,7 @@ function enableScroll() {
 
 const currentFooteryear = () => {
 	const year = new Date().getFullYear()
-	footerYear.innerText = year
+	footerYear.textContent = year
 }
 
 currentFooteryear()

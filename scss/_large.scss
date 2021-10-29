@@ -94,7 +94,7 @@
 		}
 	}
 
-	.header-xray {
+	.header-subpage {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 80px 1fr;
@@ -118,6 +118,10 @@
 			grid-row: 2/3;
 			align-self: end;
 			margin-bottom: 1em;
+
+			&--aboutus {
+				color: $darker;
+			}
 		}
 
 		&__text {
@@ -142,12 +146,21 @@
 		}
 
 		&__shadow {
-			background-color: $dark;
 			height: 60%;
+
+			&--xray {
+				background-color: $dark;
+			}
+
+			&--aboutus {
+				background-color: $light-darker;
+			}
 		}
 	}
 
 	.services {
+		margin-top: 0;
+		padding-top: 6em;
 		scroll-margin-top: 80px;
 
 		&__items {
@@ -245,6 +258,36 @@
 		}
 	}
 
+	.aboutus {
+		margin-top: 6em;
+		padding: 6em 3em 5em;
+
+		&__cards {
+			gap: 4em;
+		}
+
+		&__card {
+			grid-template-columns: repeat(2, 1fr);
+			justify-items: center;
+			align-items: center;
+			gap: 2em;
+		}
+
+		&__text-box {
+			&--even {
+				grid-column: 1/2;
+				grid-row: 1/2;
+			}
+		}
+
+		&__img {
+			&--even {
+				grid-column: 2/3;
+				grid-row: 1/2;
+			}
+		}
+	}
+
 	.xray-lab {
 		margin-top: 6em;
 		padding: 6em 4em 5em;
@@ -281,7 +324,7 @@
 		}
 	}
 
-	.header-xray {
+	.header-subpage {
 		&__title {
 			font-size: 8rem;
 		}
@@ -296,6 +339,24 @@
 
 		&__wrapper {
 			grid-template-columns: 1fr 2fr 2fr;
+		}
+	}
+
+	.aboutus {
+		&__cards {
+			gap: 5em;
+		}
+
+		&__card {
+			gap: 3em;
+		}
+
+		&__name {
+			font-size: 2.6rem;
+		}
+
+		&__text {
+			font-size: 2rem;
 		}
 	}
 }
