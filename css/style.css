@@ -345,13 +345,18 @@ body {
 }
 
 .header-subpage--xray {
-  background-image: url("../img/xray/aparat-rtg.jpg");
+  background-image: url("../img/xray/aparat-rtg-md.jpg");
   background-position: center 20%;
 }
 
 .header-subpage--aboutus {
-  background-image: url("../img/aboutus/header.jpg");
-  background-position: 55% 20%;
+  background-image: url("../img/aboutus/cs-kanczuga-zespol-md.jpg");
+  background-position: 53% 20%;
+}
+
+.header-subpage--services {
+  background-image: url("../img/services/uslugi-md.jpg");
+  background-position: center 20%;
 }
 
 .header-subpage__wrapper {
@@ -565,6 +570,69 @@ body {
 
 .gallery__next, .gallery__prev {
   display: none;
+}
+
+.services-about {
+  padding: 4em 1em 2em;
+  background-color: #e9e6e6;
+  color: #4b4b4b;
+}
+
+.services-about__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 3em;
+}
+
+.services-about__item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1em;
+  padding: 2em 1em 1em;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+.services-about__title {
+  position: relative;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.services-about__title::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 3px;
+  width: 40%;
+  background-color: #3d766c;
+}
+
+.services-about__text {
+  margin-bottom: 0.8em;
+}
+
+.services-about__list {
+  list-style-position: inside;
+}
+
+.services-about__list-item {
+  margin-bottom: 0.6em;
+}
+
+.services-about__img {
+  width: 100%;
+  border-radius: 4px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .aboutus {
@@ -847,6 +915,16 @@ body {
     margin: 0 0.5em;
     height: 300px;
   }
+  .services-about {
+    padding: 4em 2em 3em;
+  }
+  .services-about__item {
+    gap: 2em;
+    padding: 2em 2em 1em;
+  }
+  .services-about__text, .services-about__list {
+    font-size: 1.8rem;
+  }
   .aboutus {
     padding: 4em 2em 3em;
   }
@@ -953,6 +1031,19 @@ body {
   .gallery__box {
     margin: 0 1em;
     height: 400px;
+  }
+  .services-about {
+    padding: 5em 3em 4em;
+  }
+  .services-about__items {
+    gap: 5em;
+  }
+  .services-about__item {
+    padding: 3em 2em 2em;
+  }
+  .services-about__title {
+    font-size: 2.8rem;
+    margin-bottom: 2em;
   }
   .aboutus {
     padding: 5em 3em 4em;
@@ -1310,6 +1401,25 @@ body {
   }
   .gallery__prev {
     left: 0.5em;
+  }
+  .services-about {
+    margin-top: 6em;
+    padding: 6em 3em 5em;
+  }
+  .services-about__item {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    padding: 3em 2em 2em;
+  }
+  .services-about__text-box {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+  }
+  .services-about__img {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
   }
   .aboutus {
     margin-top: 6em;

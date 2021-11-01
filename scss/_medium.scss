@@ -69,6 +69,23 @@
 		}
 	}
 
+	.services-about {
+		padding: 5em 3em 4em;
+
+		&__items {
+			gap: 5em;
+		}
+
+		&__item {
+			padding: 3em 2em 2em;
+		}
+
+		&__title {
+			font-size: 2.8rem;
+			margin-bottom: 2em;
+		}
+	}
+
 	.aboutus {
 		padding: 5em 3em 4em;
 

@@ -258,6 +258,24 @@
 		}
 	}
 
+	.services-about {
+		margin-top: 6em;
+		padding: 6em 3em 5em;
+
+		&__item {
+			grid-template-columns: repeat(3, 1fr);
+			padding: 3em 2em 2em;
+		}
+
+		&__text-box {
+			grid-column: 1/3;
+		}
+
+		&__img {
+			grid-column: 2/4;
+		}
+	}
+
 	.aboutus {
 		margin-top: 6em;
 		padding: 6em 3em 5em;
