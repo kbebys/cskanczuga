@@ -259,16 +259,25 @@
 	}
 
 	.services-about {
-		margin-top: 6em;
 		padding: 6em 3em 5em;
 
 		&__item {
 			grid-template-columns: repeat(3, 1fr);
-			padding: 3em 2em 2em;
+			gap: 3em;
+			padding: 3em;
+			scroll-margin-top: 80px;
 		}
 
 		&__text-box {
 			grid-column: 1/3;
+		}
+
+		&__title {
+			grid-column: 1/4;
+
+			&::before {
+				width: 30%;
+			}
 		}
 
 		&__img {
@@ -322,6 +331,21 @@
 
 	.contact {
 		scroll-margin-top: 80px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.services-about {
+		&__item {
+			column-gap: 4em;
+			padding: 4em;
+		}
+
+		&__title {
+			&::before {
+				width: 20%;
+			}
+		}
 	}
 }
 

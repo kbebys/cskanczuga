@@ -437,7 +437,8 @@ body {
 
 .services-about {
 	padding: 4em 1em 2em;
-	background-color: $light-darker;
+	// background-color: $light-darker;
+	background-color: $light;
 	color: $darker;
 
 	&__items {
@@ -452,7 +453,7 @@ body {
 		gap: 1em;
 		padding: 2em 1em 1em;
 		border-radius: 4px;
-		background-color: $light;
+		background-color: $light-darker;
 	}
 
 	&__title {
