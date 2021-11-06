@@ -25,6 +25,10 @@
 		&__btn {
 			font-size: 2rem;
 		}
+
+		&__img {
+			background-image: url('/img/header/header-md.jpg');
+		}
 	}
 
 	.header-subpage {
@@ -65,7 +69,7 @@
 	.gallery {
 		&__box {
 			margin: 0 1em;
-			height: 400px;
+			// height: 400px;
 		}
 	}
 

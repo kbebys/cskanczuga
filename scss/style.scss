@@ -28,6 +28,23 @@ body {
 	color: $dark;
 }
 
+.click-to-call {
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5em;
+	width: 50px;
+	height: 50px;
+	border: 1px solid $call-color;
+	border-radius: 50%;
+	font-size: 3rem;
+	color: $call-color;
+	z-index: 1000;
+}
+
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
@@ -211,7 +228,7 @@ body {
 		grid-column: 1/2;
 		grid-row: 1/2;
 		position: relative;
-		background-image: url('/img/home/header.jpg');
+		background-image: url('/img/header/header-sm.jpg');
 		background-size: cover;
 		background-position: 55% 20%;
 	}
@@ -326,18 +343,16 @@ body {
 
 	&__title {
 		margin-bottom: 0.8em;
-		font-size: 1.6rem;
+		font-size: 1.8rem;
 		text-transform: uppercase;
 	}
 
 	&__text {
 		margin-bottom: 1em;
-		font-size: 1.4rem;
 	}
 
 	&__link {
 		align-self: flex-end;
-		font-size: 1.4rem;
 		font-weight: bold;
 		color: $primary;
 		text-decoration: underline;
@@ -417,7 +432,7 @@ body {
 
 	&__box {
 		margin: 0 0.2em;
-		height: 200px;
+		// height: 200px;
 		border-radius: 4px;
 		overflow: hidden;
 	}
@@ -661,10 +676,21 @@ body {
 			height: 100%;
 		}
 	}
+
+	&__img-building {
+		position: relative;
+		display: block;
+		margin-top: 2em;
+		width: 100%;
+		max-height: 500px;
+		border-radius: 4px;
+		object-fit: cover;
+		object-position: bottom right;
+	}
 }
 
 .footer {
-	padding: 2em 0;
+	padding: 1.2em 0;
 	background-color: $dark;
 	font-size: 2rem;
 	text-align: center;
