@@ -27,7 +27,7 @@
 		}
 
 		&__img {
-			background-image: url('/img/header/header-md.jpg');
+			background-image: url('/img/header/header-md.webp');
 		}
 	}
 
@@ -61,6 +61,7 @@
 			}
 
 			&-img {
+				align-self: center;
 				border-radius: 4px;
 			}
 		}
