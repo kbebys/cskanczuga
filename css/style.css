@@ -1,3 +1,35 @@
+@font-face {
+  font-family: 'myYanone';
+  src: url("../fonts/YanoneKaffeesatz-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'myRaleway';
+  src: url("../fonts/Raleway-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'myRaleway';
+  src: url("../fonts/Raleway-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'myRaleway';
+  src: url("../fonts/Raleway-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @-webkit-keyframes pulse {
   from {
     -webkit-transform: scale(1);
@@ -69,7 +101,7 @@ body {
   scroll-margin-top: 80px;
   background-color: #f1f1f1;
   font-size: 1.6rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: "myRaleway", sans-serif;
   font-weight: 300;
   color: #5e5e5e;
 }
@@ -269,8 +301,8 @@ body {
 
 .header__title {
   margin-bottom: 0.2em;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-weight: 600;
+  font-family: "myYanone", sans-serif;
+  font-weight: bold;
   font-size: 4rem;
   text-transform: uppercase;
   color: #5e5e5e;
@@ -380,8 +412,8 @@ body {
 
 .header-subpage__title {
   margin-bottom: 0.2em;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-weight: 600;
+  font-family: "myYanone", sans-serif;
+  font-weight: bold;
   font-size: 4rem;
   text-transform: uppercase;
 }

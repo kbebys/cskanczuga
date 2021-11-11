@@ -1,57 +1,60 @@
-const navBtn = document.querySelector('.hamburger')
-const navMenu = document.querySelector('.nav__mobile')
-const navLinks = document.querySelectorAll('.nav__link-item-mobile')
-const footerYear = document.querySelector('.footer__year')
+let navBtn // Button to uncollapse/collapse mobile navigation
+let navMenu // Mobile navigation
+let navLinks // Mobile navigation links
+let footerYear // Current Year displaying in footer
 
-function navLinksHandler() {
-	navBtn.classList.remove('is-active')
-	navMenu.classList.remove('nav__active')
-	navBtn.setAttribute('aria-expanded', 'false')
-	navLinksAnimationHandler()
-	enableScroll()
+const main = () => {
+	DOMQuerySelectors()
+	DOMEventListeners()
+	setCurrentFooterYear()
 }
 
-function navLinksAnimationHandler() {
-	let animationDelay = 0.1
-
-	navLinks.forEach(element => {
-		element.classList.toggle('nav__links-animation')
-		element.style.animationDelay = animationDelay + 's'
-		animationDelay += 0.05
-	})
+const DOMQuerySelectors = () => {
+	navBtn = document.querySelector('.hamburger')
+	navMenu = document.querySelector('.nav__mobile')
+	navLinks = document.querySelectorAll('.nav__link-item-mobile')
+	footerYear = document.querySelector('.footer__year')
 }
 
-function navHandler() {
-	navBtn.classList.toggle('is-active')
-	navMenu.classList.toggle('nav__active')
+const DOMEventListeners = () => {
+	navBtn.addEventListener('click', handleNav)
 
-	navLinksAnimationHandler()
-
-	if (navMenu.classList.contains('nav__active')) {
-		navLinks.forEach(elemen => {
-			elemen.addEventListener('click', navLinksHandler)
-		})
-
-		disableScroll()
-		navBtn.setAttribute('aria-expanded', 'true')
-	} else {
-		enableScroll()
-		navBtn.setAttribute('aria-expanded', 'false')
+	for (const link of navLinks) {
+		link.addEventListener('click', handleNav)
 	}
 }
 
-function disableScroll() {
-	document.body.classList.add('stop-scrolling')
+const handleNav = () => {
+	navBtn.classList.toggle('is-active')
+	navMenu.classList.toggle('nav__active')
+	document.body.classList.toggle('stop-scrolling')
+	navLinksAnimation()
+	setAriaExpanded()
 }
 
-function enableScroll() {
-	document.body.classList.remove('stop-scrolling')
+const navLinksAnimation = () => {
+	let delayTime = 0.05
+
+	navLinks.forEach(link => {
+		link.classList.toggle('nav__links-animation')
+		link.style.animationDelay = delayTime + 's'
+		delayTime += 0.05
+	})
 }
 
-const currentFooteryear = () => {
+const setCurrentFooterYear = () => {
 	const year = new Date().getFullYear()
 	footerYear.textContent = year
 }
 
-currentFooteryear()
-navBtn.addEventListener('click', navHandler)
+const setAriaExpanded = () => {
+	const navBtnExpandedValue = navBtn.getAttribute('aria-expanded')
+
+	if (navBtnExpandedValue === 'false') {
+		navBtn.setAttribute('aria-expanded', 'true')
+	} else {
+		navBtn.setAttribute('aria-expanded', 'false')
+	}
+}
+
+document.addEventListener('DOMContentLoaded', main)
