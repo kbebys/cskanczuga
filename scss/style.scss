@@ -1,6 +1,8 @@
 @import './fonts';
 @import './colors';
 @import './animations';
+@import '../libraries/slick/slick';
+@import '../libraries/hamburger/hamburger';
 
 *,
 *::after,
@@ -337,7 +339,9 @@ body {
 
 	&__img {
 		width: 100%;
+		height: auto;
 		max-height: 400px;
+		aspect-ratio: 800/533;
 		border-radius: 4px;
 		object-fit: cover;
 		object-position: center;
