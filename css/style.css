@@ -78,124 +78,6 @@
   }
 }
 
-/*
-     _ _      _       _
- ___| (_) ___| | __  (_)___
-/ __| | |/ __| |/ /  | / __|
-\__ \ | | (__|   < _ | \__ \
-|___/_|_|\___|_|\_(_)/ |___/
-                   |__/
-
- Version: 1.8.0
-  Author: Ken Wheeler
- Website: http://kenwheeler.github.io
-    Docs: http://kenwheeler.github.io/slick
-    Repo: http://github.com/kenwheeler/slick
-  Issues: http://github.com/kenwheeler/slick/issues
-
- */
-/* Slider */
-.slick-slider {
-  position: relative;
-  display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.slick-list {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
-.slick-list:focus {
-  outline: none;
-}
-
-.slick-list.dragging {
-  cursor: pointer;
-  cursor: hand;
-}
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-  position: relative;
-  left: 0;
-  top: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.slick-track:before, .slick-track:after {
-  content: '';
-  display: table;
-}
-
-.slick-track:after {
-  clear: both;
-}
-
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-
-.slick-slide {
-  float: left;
-  height: 100%;
-  min-height: 1px;
-  display: none;
-}
-
-[dir='rtl'] .slick-slide {
-  float: right;
-}
-
-.slick-slide img {
-  display: block;
-}
-
-.slick-slide.slick-loading img {
-  display: none;
-}
-
-.slick-slide.dragging img {
-  pointer-events: none;
-}
-
-.slick-initialized .slick-slide {
-  display: block;
-}
-
-.slick-loading .slick-slide {
-  visibility: hidden;
-}
-
-.slick-vertical .slick-slide {
-  display: block;
-  height: auto;
-  border: 1px solid transparent;
-}
-
-.slick-arrow.slick-hidden {
-  display: none;
-}
-
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -325,6 +207,188 @@
           transition-delay: 0.075s;
 }
 
+.glide {
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.glide * {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.glide__track {
+  overflow: hidden;
+}
+
+.glide__slides {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -ms-touch-action: pan-Y;
+      touch-action: pan-Y;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  will-change: transform;
+}
+
+.glide__slides--dragging {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.glide__slide {
+  width: 100%;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  white-space: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.glide__slide a {
+  -webkit-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.glide__arrows {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.glide__bullets {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.glide--rtl {
+  direction: rtl;
+}
+
+.glide__arrow {
+  position: absolute;
+  display: block;
+  top: 50%;
+  z-index: 2;
+  color: white;
+  text-transform: uppercase;
+  padding: 9px 12px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+  text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  cursor: pointer;
+  -webkit-transition: opacity 150ms ease, border 300ms ease-in-out;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  line-height: 1;
+}
+
+.glide__arrow:focus {
+  outline: none;
+}
+
+.glide__arrow:hover {
+  border-color: white;
+}
+
+.glide__arrow--left {
+  left: 2em;
+}
+
+.glide__arrow--right {
+  right: 2em;
+}
+
+.glide__arrow--disabled {
+  opacity: 0.33;
+}
+
+.glide__bullets {
+  position: absolute;
+  z-index: 2;
+  bottom: 2em;
+  left: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style: none;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.glide__bullet {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  line-height: 0;
+  -webkit-box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+  margin: 0 0.25em;
+}
+
+.glide__bullet:focus {
+  outline: none;
+}
+
+.glide__bullet:hover,
+.glide__bullet:focus {
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.glide__bullet--active {
+  background-color: white;
+}
+
+.glide--swipeable {
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+
+.glide--dragging {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
 *,
 *::after,
 *::before {
@@ -366,14 +430,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5em;
-  width: 50px;
-  height: 50px;
-  border: 1px solid #1d56a2;
+  padding: 0.6em;
+  border: 2px solid #1d56a2;
   border-radius: 50%;
-  font-size: 3rem;
-  color: #1d56a2;
   z-index: 1000;
+}
+
+.click-to-call-icon {
+  width: 40px;
+  height: 40px;
 }
 
 .wrapper {
@@ -804,6 +869,15 @@ body {
 
 .services__rtg-btn {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 1em;
   padding: 0.5em 1em;
   border-radius: 4px;
@@ -835,6 +909,12 @@ body {
           animation: pulse 1s;
 }
 
+.services__rtg-icon {
+  margin-left: 0.4em;
+  width: 1em;
+  height: 1em;
+}
+
 .services__rtg-img {
   width: 100%;
   height: 95%;
@@ -851,22 +931,17 @@ body {
   background-color: #e9e6e6;
 }
 
-.gallery__box {
-  margin: 0 0.2em;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
 .gallery__img {
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  border-radius: 4px;
 }
 
-.gallery__next, .gallery__prev {
+.gallery .glide__arrows {
   display: none;
 }
 
@@ -1074,6 +1149,7 @@ body {
 }
 
 .contact__text--phone {
+  margin-bottom: 0.8em;
   font-size: 2rem;
   font-weight: bold;
   color: #3d766c;
@@ -1087,18 +1163,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5em 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.4em 1em;
+  border: 2px solid #3b5998;
   border-radius: 4px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #3b5998;
   -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
-}
-
-.contact__facebook-link i {
-  margin-right: 0.2em;
-  font-size: 4rem;
 }
 
 .contact__facebook-link::before {
@@ -1121,6 +1196,15 @@ body {
 .contact__facebook-link:hover {
   background-color: #3b5998;
   color: #fff;
+}
+
+.contact__facebook-icon {
+  margin-right: 0.4em;
+  padding: 0.2em;
+  width: 40px;
+  height: 40px;
+  border-radius: 40%;
+  background-color: #e9e6e6;
 }
 
 .contact__map {
@@ -1154,6 +1238,13 @@ body {
   }
   .header__text {
     font-size: 2rem;
+  }
+  .contact__facebook-link {
+    font-size: 1.8rem;
+  }
+  .contact__facebook-icon {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -1204,9 +1295,6 @@ body {
   }
   .gallery {
     margin: 4em 0 1em;
-  }
-  .gallery__box {
-    margin: 0 0.5em;
   }
   .services-about {
     padding: 4em 2em 3em;
@@ -1285,6 +1373,9 @@ body {
   .header-subpage__text {
     font-size: 2rem;
   }
+  .gallery {
+    padding: 3em 0;
+  }
   .services__items {
     -ms-grid-columns: 2fr 3fr;
         grid-template-columns: 2fr 3fr;
@@ -1309,9 +1400,6 @@ body {
         -ms-grid-row-align: center;
         align-self: center;
     border-radius: 4px;
-  }
-  .gallery__box {
-    margin: 0 1em;
   }
   .services-about {
     padding: 5em 3em 4em;
@@ -1688,27 +1776,16 @@ body {
   .gallery {
     margin: 5em 0;
   }
-  .gallery-wrapper {
-    position: relative;
+  .gallery .glide__arrows {
+    display: block;
   }
-  .gallery__next, .gallery__prev {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    padding: 0.1em 0.2em;
+  .gallery .glide__arrow {
+    background-color: rgba(255, 255, 255, 0.4);
     border: none;
-    background: none;
-    font-size: 5rem;
-    color: #4b4b4b;
-    cursor: pointer;
-    z-index: 10;
   }
-  .gallery__next {
-    right: 0.5em;
-  }
-  .gallery__prev {
-    left: 0.5em;
+  .gallery .glide__arrow img {
+    width: 40px;
+    height: 40px;
   }
   .services-about {
     padding: 6em 3em 5em;
@@ -1843,11 +1920,11 @@ body {
 }
 
 @media (min-width: 1500px) {
-  .gallery__next {
-    right: -1em;
+  .gallery .glide__arrow--left {
+    left: -2.5em;
   }
-  .gallery__prev {
-    left: -1em;
+  .gallery .glide__arrow--right {
+    right: -2.5em;
   }
 }
 /*# sourceMappingURL=style.css.map */

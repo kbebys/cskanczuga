@@ -17,7 +17,6 @@
     <meta property="og:image" content="http://cskanczuga.kbebys.pl/img/header/header-sm.webp" />
     <link rel="icon" type="image/png" href="img/brand-icon.png">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://kit.fontawesome.com/3765499b57.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -150,51 +149,70 @@
                         <h3 class="services__rtg-title">Pracownia RTG w Kańczudze</h3>
                         <p class="services__rtg-text">Wykonujemy zdjęcia zębowe, pantomograficzne oraz cefalometryczne.
                         </p>
-                        <a href="xray.html" class="services__rtg-btn">Dowiedz się więcej <i class="fas fa-chevron-right"></i></i></a>
+                        <a href="xray.html" class="services__rtg-btn">Dowiedz się więcej <img src="img/xray/chevron-right.svg" alt="" class="services__rtg-icon"></a>
                     </div>
                 </div>
             </div>
         </section>
         <section class="gallery">
             <div class="wrapper gallery-wrapper">
-                <div class="gallery__carousel">
-                    <div class="gallery__box">
-                        <img src="./img/gallery/personel-galeria.webp" width="840" height="560"
-                            alt="Pesronel centrum stomatologicznego w gabinecie" class="gallery__img">
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <div class="glide__slides">
+                            <div class="glide__slide">
+                                <img src="./img/gallery/personel-galeria.webp" width="840" height="560"
+                                    alt="Pesronel centrum stomatologicznego w gabinecie" class="gallery__img">
+                            </div>
+                            <div class="glide__slide">
+                                <img src="./img/gallery/fotel-galeria.webp" width="840" height="560"
+                                    alt="Fotel stomatologiczny z akcesoriami w gabinecie" class="gallery__img">
+                            </div>
+                            <div class="glide__slide">
+                                <img src="./img/gallery/narzedzia-2-galeria.webp" width="840" height="560"
+                                    alt="Narzędzia do zabiegów stomatologicznych postawione na blacie"
+                                    class="gallery__img">
+                            </div>
+                            <div class="glide__slide">
+                                <img src="./img/gallery/poczekalnia-galeria.webp" width="840" height="560"
+                                    alt="Poczekalnia dla pacjentów" class="gallery__img">
+                            </div>
+                            <div class="glide__slide">
+                                <img src="./img/gallery/przeswietlenie-zebow-galeria.webp" width="840" height="560"
+                                    alt="Stomatolog podczas prześwietlenia zębów u pacjenta" class="gallery__img">
+                            </div>
+                            <div class="glide__slide">
+                                <img src="./img/gallery/gabinet-galeria.webp" width="840" height="560"
+                                    alt="Gabinet stomatologiczny z fotelem i obrazem na ścianie" class="gallery__img">
+                            </div>
+                            <div class="glide__slide">
+                                <img src="./img/gallery/akcesoria-galeria.webp" width="840" height="560"
+                                    alt="Akcesoria przy fotelu stomatologicznym do leczenia pacjentów"
+                                    class="gallery__img">
+                            </div>
+                            <div class="glide__slide">
+                                <img src="./img/gallery/wizytowka-galeria.webp" width="840" height="560"
+                                    alt="Wizytówka wyeksponowana wraz z kwiatkiem w doniczce na szklanym stoliku"
+                                    class="gallery__img">
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery__box">
-                        <img src="./img/gallery/fotel-galeria.webp" width="840" height="560"
-                            alt="Fotel stomatologiczny z akcesoriami w gabinecie" class="gallery__img">
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img
+                                src="./img/gallery/chevron-left.svg" alt="" aria-label="Poprzednie zdjęcie"></button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img
+                                src="./img/gallery/chevron-right.svg" alt="" aria-label="Następne zdjęcie"></button>
                     </div>
-                    <div class="gallery__box">
-                        <img src="./img/gallery/narzedzia-2-galeria.webp" width="840" height="560"
-                            alt="Narzędzia do zabiegów stomatologicznych postawione na blacie" class="gallery__img">
-                    </div>
-                    <div class="gallery__box">
-                        <img src="./img/gallery/poczekalnia-galeria.webp" width="840" height="560"
-                            alt="Poczekalnia dla pacjentów" class="gallery__img">
-                    </div>
-                    <div class="gallery__box">
-                        <img src="./img/gallery/przeswietlenie-zebow-galeria.webp" width="840" height="560"
-                            alt="Stomatolog podczas prześwietlenia zębów u pacjenta" class="gallery__img">
-                    </div>
-                    <div class="gallery__box">
-                        <img src="./img/gallery/gabinet-galeria.webp" width="840" height="560"
-                            alt="Gabinet stomatologiczny z fotelem i obrazem na ścianie" class="gallery__img">
-                    </div>
-                    <div class="gallery__box">
-                        <img src="./img/gallery/akcesoria-galeria.webp" width="840" height="560"
-                            alt="Akcesoria przy fotelu stomatologicznym do leczenia pacjentów" class="gallery__img">
-                    </div>
-                    <div class="gallery__box">
-                        <img src="./img/gallery/wizytowka-galeria.webp" width="840" height="560"
-                            alt="Wizytówka wyeksponowana wraz z kwiatkiem w doniczce na szklanym stoliku"
-                            class="gallery__img">
+                    <div class="glide__bullets" data-glide-el="controls[nav]">
+                        <button class="glide__bullet" data-glide-dir="=0" aria-label="Zmiana zdjęcia"></button>
+                        <button class="glide__bullet" data-glide-dir="=1" aria-label="Zmiana zdjęcia"></button>
+                        <button class="glide__bullet" data-glide-dir="=2" aria-label="Zmiana zdjęcia"></button>
+                        <button class="glide__bullet" data-glide-dir="=3" aria-label="Zmiana zdjęcia"></button>
+                        <button class="glide__bullet" data-glide-dir="=4" aria-label="Zmiana zdjęcia"></button>
+                        <button class="glide__bullet" data-glide-dir="=5" aria-label="Zmiana zdjęcia"></button>
+                        <button class="glide__bullet" data-glide-dir="=6" aria-label="Zmiana zdjęcia"></button>
+                        <button class="glide__bullet" data-glide-dir="=7" aria-label="Zmiana zdjęcia"></button>
                     </div>
                 </div>
-                <button class="gallery__prev" aria-label="Następne zdjęcia"><i class="fas fa-chevron-left"></i></button>
-                <button class="gallery__next" aria-label="Poprzednie zdjęcia"><i
-                        class="fas fa-chevron-right"></i></button>
             </div>
         </section>
         <section class="contact" id="contact">
@@ -217,7 +235,7 @@
                             792 016 299
                         </p>
                         <a href="https://www.facebook.com/profile.php?id=100037192071372" target="_blank" rel="noopener" class="contact__facebook-link">
-                        <i class="fab fa-facebook"></i> C. S. na Facebooku</a>
+                        <img src="./img/facebook.svg" alt="" class="contact__facebook-icon"> C. S. na Facebooku</a>
                     </div>
                     <div class="contact__box contact__box--localization">
                         <img src="./img/map-pin.svg" alt="" class="contact__img">
@@ -240,11 +258,9 @@
     <footer class="footer">
         <p class="footer__text">&copy; <span class="footer__year"></span> C. S. Kańczuga</p>
     </footer>
-
-    <a href="tel:+48792016299" class="click-to-call" aria-label="Kliknij i zadzwoń"><i class="fas fa-phone"></i></a>
-    <script src="./libraries/jquery/jquery-3.6.0.slim.min.js"></script>
-    <script src="./libraries/slick/slick.min.js"></script>
-    <script src="./js/slick.js"></script>
+    <a href="tel:+48792016299" class="click-to-call" aria-label="Kliknij i zadzwoń"><img src="./img/phone.svg" alt="" class="click-to-call-icon"></a>
+    <script src="./libraries/glide/glide.min.js"></script>
+    <!-- <script src="./js/slick.js"></script> -->
     <script src="./js/script.js"></script>
 </body>
 

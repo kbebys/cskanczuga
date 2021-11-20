@@ -260,29 +260,20 @@
 	.gallery {
 		margin: 5em 0;
 
-		&-wrapper {
-			position: relative;
-		}
-		&__next,
-		&__prev {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			padding: 0.1em 0.2em;
-			border: none;
-			background: none;
-			font-size: 5rem;
-			color: $darker;
-			cursor: pointer;
-			z-index: 10;
-		}
+		.glide {
+			&__arrows {
+				display: block;
+			}
 
-		&__next {
-			right: 0.5em;
-		}
+			&__arrow {
+				background-color: rgba(255, 255, 255, 0.4);
+				border: none;
 
-		&__prev {
-			left: 0.5em;
+				& img {
+					width: 40px;
+					height: 40px;
+				}
+			}
 		}
 	}
 
@@ -437,12 +428,16 @@
 
 @media (min-width: 1500px) {
 	.gallery {
-		&__next {
-			right: -1em;
-		}
+		.glide {
+			&__arrow {
+				&--left {
+					left: -2.5em;
+				}
 
-		&__prev {
-			left: -1em;
+				&--right {
+					right: -2.5em;
+				}
+			}
 		}
 	}
 }

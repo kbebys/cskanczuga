@@ -42,6 +42,10 @@
 		}
 	}
 
+	.gallery {
+		padding: 3em 0;
+	}
+
 	.services {
 		&__items {
 			grid-template-columns: 2fr 3fr;
@@ -64,13 +68,6 @@
 				align-self: center;
 				border-radius: 4px;
 			}
-		}
-	}
-
-	.gallery {
-		&__box {
-			margin: 0 1em;
-			// height: 400px;
 		}
 	}
 
