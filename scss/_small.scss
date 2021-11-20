@@ -115,9 +115,8 @@
 
 		&__img {
 			grid-column: 2/4;
+			align-self: center;
 			margin: 0;
-			height: 100%;
-			z-index: 0;
 		}
 	}
 
