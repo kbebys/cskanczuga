@@ -1,0 +1,183 @@
+.contact {
+	padding: 3em 0;
+	background-color: $light;
+
+	&__boxes {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 3em;
+		padding: 0 1em;
+	}
+
+	&__box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 1em;
+		padding: 4em 1em 1em;
+		border-radius: 4px;
+		background-color: $light-darker;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+		text-align: center;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 80px;
+		height: 80px;
+		padding: 0.5em;
+		border-radius: 40%;
+		background-color: $light-darker;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+	}
+
+	&__title {
+		margin-bottom: 0.6em;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		margin-bottom: 0.4em;
+	}
+
+	&__text-span {
+		font-weight: bold;
+	}
+
+	&__text--phone {
+		margin-bottom: 0.8em;
+		font-size: 2rem;
+		font-weight: bold;
+		color: $primary;
+	}
+
+	&__facebook {
+		&-link {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0.4em 1em;
+			border: 2px solid $facebook-color;
+			border-radius: 4px;
+			font-size: 1.6rem;
+			font-weight: bold;
+			color: $facebook-color;
+			transition: background-color 0.3s, color 0.3s;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: 1px solid $facebook-color;
+				border-radius: 4px;
+				opacity: 0;
+			}
+
+			&:hover::before {
+				animation: pulse 1s;
+			}
+
+			&:hover {
+				background-color: $facebook-color;
+				color: $pure-white;
+			}
+		}
+
+		&-icon {
+			margin-right: 0.4em;
+			padding: 0.2em;
+			width: 40px;
+			height: 40px;
+			border-radius: 40%;
+			background-color: $light-darker;
+		}
+	}
+
+	&__map {
+		margin-top: 1em;
+		width: 100%;
+		min-height: 200px;
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+@media (min-width: 375px) {
+	.contact {
+		&__facebook {
+			&-link {
+				font-size: 1.8rem;
+			}
+
+			&-icon {
+				width: 50px;
+				height: 50px;
+			}
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.contact {
+		&__boxes {
+			padding: 0 2em;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.contact {
+		&__boxes {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&__box {
+			grid-column: 1/2;
+
+			&--localization {
+				grid-column: 2/3;
+				grid-row: 1/3;
+			}
+		}
+
+		&__title {
+			margin-bottom: 0.6em;
+			font-size: 2.2rem;
+		}
+
+		&__text {
+			font-size: 1.8rem;
+		}
+
+		&__text--phone {
+			font-size: 2.4rem;
+		}
+
+		&__facebook-link {
+			font-size: 2rem;
+		}
+
+		&__map {
+			margin-top: 2em;
+			height: 100%;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.contact {
+		scroll-margin-top: 80px;
+	}
+}

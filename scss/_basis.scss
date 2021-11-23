@@ -1,0 +1,100 @@
+@import './fonts';
+@import './colors';
+@import './animations';
+@import './hamburger';
+
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: $dark;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	scroll-margin-top: 80px;
+	background-color: $light;
+	font-size: 1.6rem;
+	font-family: $mainFont;
+	font-weight: 300;
+	color: $dark;
+}
+
+.click-to-call {
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.6em;
+	border: 2px solid $call-color;
+	border-radius: 50%;
+	z-index: 1000;
+
+	&-icon {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1400px;
+}
+
+.stop-scrolling {
+	height: 100%;
+	overflow: hidden;
+}
+
+.section-title {
+	position: relative;
+	margin: 0 auto 2em;
+	width: fit-content;
+	font-size: 2.6rem;
+	font-weight: 300;
+	text-transform: uppercase;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		height: 3px;
+		width: 3em;
+		background-color: $primary;
+	}
+
+	&-span {
+		font-weight: bold;
+		white-space: nowrap;
+	}
+}
+
+@media (min-width: 768px) {
+	.section-title {
+		font-size: 2.8rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.section-title {
+		font-size: 3rem;
+	}
+
+	.click-to-call {
+		display: none;
+	}
+}

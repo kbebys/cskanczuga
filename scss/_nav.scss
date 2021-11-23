@@ -1,0 +1,148 @@
+.hamburger {
+	position: fixed;
+	top: 1.8rem;
+	left: 1.5rem;
+	z-index: 1000;
+
+	&:focus {
+		border: 1px solid $dark;
+		border-radius: 8px;
+	}
+
+	.hamburger-inner,
+	.hamburger-inner::before,
+	.hamburger-inner::after {
+		background-color: $primary;
+	}
+}
+
+.nav {
+	&__mobile {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		transform: translateX(-102%);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: $light;
+		transition: transform 0.5s cubic-bezier(0.28, 0.74, 0.31, 1);
+		z-index: 500;
+	}
+
+	&__active {
+		transform: translateX(0);
+	}
+
+	&__link-items {
+		justify-self: center;
+		align-self: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		height: 60%;
+	}
+
+	&__link-item {
+		margin-bottom: 0.4em;
+		padding: 0.5em 1em;
+		font-size: 2rem;
+		font-weight: normal;
+		text-transform: uppercase;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	&__current-page {
+		color: $primary;
+		font-weight: bold;
+	}
+
+	&__links-animation {
+		animation: navLinkItemsAnimation 0.8s both;
+	}
+
+	&__desktop {
+		display: none;
+	}
+}
+
+@media (min-width: 576px) {
+	.nav {
+		&__link-item {
+			font-size: 2.4rem;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.nav {
+		&__link-home {
+			padding: 0.5em 0.5em;
+		}
+
+		&__link-item {
+			font-size: 2.8rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.hamburger {
+		display: none;
+	}
+
+	.nav {
+		&__mobile {
+			display: none;
+		}
+
+		&__desktop {
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 80px;
+			border-bottom: 1px solid #c7c4c4;
+			background-color: $light-darker;
+			z-index: 100;
+		}
+
+		&__desktop-box {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			height: 80px;
+		}
+
+		&__link-item {
+			position: relative;
+			margin: 0.5em;
+			padding: 0.4em 0.8em;
+			font-size: 2rem;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: 1px solid $primary;
+				border-radius: 4px;
+				opacity: 0;
+			}
+
+			&:hover::before {
+				animation: pulse 1s;
+			}
+		}
+	}
+}
