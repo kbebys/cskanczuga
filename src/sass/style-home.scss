@@ -78,7 +78,7 @@
 		position: relative;
 		width: 100%;
 		height: 100%;
-		background-image: url('/img/header/header-sm.webp');
+		background-image: url('../img/header/header-sm.webp');
 		background-size: cover;
 		background-position: 55% 20%;
 	}
@@ -146,14 +146,6 @@
 
 	&__text {
 		margin-bottom: 1em;
-	}
-
-	&__alert-text {
-		align-self: flex-start;
-		margin-bottom: 1em;
-		color: $complementary;
-		font-weight: bold;
-		text-transform: uppercase;
 	}
 
 	&__link {
@@ -333,7 +325,7 @@
 		}
 
 		&__img {
-			background-image: url('/img/header/header-md.webp');
+			background-image: url('../img/header/header-md.webp');
 		}
 	}
 
@@ -415,7 +407,7 @@
 			grid-column: 2/3;
 			grid-row: 2/4;
 			position: relative;
-			background-image: url('/img/header/header-lg.webp');
+			background-image: url('../img/header/header-lg.webp');
 			background-position: 55% 20%;
 		}
 
